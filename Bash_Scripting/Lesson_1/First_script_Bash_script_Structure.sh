@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Author : Yasser JEMLI
-# Date : 12 nov 2024
+# -------------------------------------------------------------------
+# Author 	: 	Yasser JEMLI
+# Date Created  : 	12/11/2024
+# Date Modified :	12/11/2024
 
 # Shebang to specify the interpreter for the script
 

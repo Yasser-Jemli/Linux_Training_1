@@ -17,6 +17,7 @@ Date=$(date)
 echo ""
 echo "*************************************** E-MAIL ***********************************************************"
 echo " Date is : $Date "
+echo ""
 echo " Dear ${student}  "
 echo " The Board and I would like to thank you for the excellent work that you have been doing over the last few months"
 echo ""

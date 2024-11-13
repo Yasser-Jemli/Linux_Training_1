@@ -4,8 +4,10 @@
 # Date		:	12-11-2024
 
 
+# ***************************************************************************
 # ******************** Section 1 ********************************************
 #	Shell Variables
+# ***************************************************************************
 
 echo " -------------------> Section 1 <----------------------------"
 echo "		Shell Variables		"
@@ -45,9 +47,9 @@ echo " https://ezprompt.net/"
 echo ""
 
 # ***************************************************************************
-
 # ****************** Section 2 **********************************************
 #	Parameter Expansions
+# ***************************************************************************
 
 echo ""
 echo " --------------> Section 2 <----------------------------------"
@@ -92,3 +94,77 @@ echo ""
 echo " Let's take from the last 5 (without including the five )  in the number variable untill the end"
 echo " ${number: -3:3}"
 
+
+
+echo "-------------------------------------------------------------"
+echo "		Arithmetic Expansion "
+
+x=5
+y=6
+
+echo $(($x + $y ))
+echo ""
+
+echo $(( $x ** $y ))
+echo ""
+
+
+# Check out next ligne Outside this Script
+# Try out echo $(( 2.5 + 1 ))
+# output of the previous command --> bash: 2.5 + 1 : syntax error: invalid arithmetic operator (error token is ".5 + 1 ")
+
+echo $(( 5 / 2 ))
+echo ""
+
+# *************************************************************************************************************************************
+# bc command ( Basic Calculator ) check --> man bc 
+# *************************************************************************************************************************************
+
+echo " Check bc command "
+echo ""
+
+echo "5/2" | bc
+echo ""
+echo "we didn't solve the issue the output is 2 instead of 2.5 "
+echo ""
+echo "scale=2; 5/2" | bc
+echo ""
+echo "scale=10; 5/2" | bc
+
+
+# *****************************************************************************************************************************************
+# Check other shell Variables
+# *****************************************************************************************************************************************
+
+echo " Your current Directory is ${PWD}"
+echo ""
+
+echo " Your Previous Directory is ${OLDPWD}"
+echo ""
+
+echo " Let's Jump to your previous Directory Using Telda ~"
+echo " the command is cd ~- "
+cd ~-
+echo ""
+echo " Let's Back to your main Directory which is now a previous Directory , hhh it's confusing Right ? :D"
+cd ~-
+echo " Try those command on your own i'm sure you well understand :D"
+echo ""
+
+
+# *******************************************************************************************************************************************
+# Brace Expansion
+# *******************************************************************************************************************************************
+
+echo " Let's Display the numbers from 1 to 9 , but in a smarter way "
+echo {1..9}
+
+echo " Let's Display all letters in order "
+echo {a..z}
+
+echo " Let's display numbers from 0 to 100 by with a step of 10 "
+echo {0..100..10} 
+
+
+echo " Try to Print this -->  Month1 Month2 Month3 .... Month12 "
+echo Month{1..12}
