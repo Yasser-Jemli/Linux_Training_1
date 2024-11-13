@@ -1,0 +1,68 @@
+Bash Scripts for Linux Training
+
+#1 [Under Construction]
+
+Welcome to the Linux and Shell Scripting Training Scripts repository! This collection features a series of bash scripts designed for beginner to advanced Linux users, covering essential skills, commands, and automation tasks. These scripts are crafted to be educational, showcasing best practices and useful techniques to help you master the Linux command line.
+Overview
+
+Each script is written to illustrate a particular concept or technique in Linux, whether it’s basic file manipulation, process management, networking commands, or scripting logic. They are organized in a way that encourages self-paced learning, making it easy to understand, modify, and apply in various scenarios.
+Table of Contents
+
+    Getting Started
+    Script Descriptions
+    Installation
+    Usage
+    Contributing
+    License
+
+Getting Started
+
+To begin using these scripts, you should have:
+
+    A Linux environment or a terminal emulator
+    Basic knowledge of command-line operations
+    Bash installed (most Linux distributions come with bash pre-installed)
+
+Clone this repository to your local machine:
+
+git clone https://github.com/yourusername/linux-training-scripts.git
+cd linux-training-scripts
+
+Script Descriptions
+Script Name	Description
+file_management.sh	Demonstrates file and directory operations (create, delete, copy, move)
+networking_basics.sh	Covers basic networking commands such as ping, ifconfig, netstat, etc.
+process_management.sh	Teaches process management commands like ps, top, kill, and how to control processes.
+automation_tools.sh	Introduces automation with cron jobs, task scheduling, and creating automated backups.
+text_processing.sh	Shows the use of grep, awk, sed, and other text manipulation commands.
+system_monitoring.sh	Contains scripts for monitoring CPU usage, disk space, memory usage, and system logs.
+Installation
+
+Simply clone the repository, as no additional installation is required. Make sure each script has executable permissions:
+
+chmod +x scriptname.sh
+
+Usage
+
+To run a script, use the following command format:
+
+./scriptname.sh
+
+For example, to run the file management script:
+
+./file_management.sh
+
+Each script includes comments and explanations to help you understand the steps.
+Contributing
+
+Feel free to contribute by adding new scripts or improving existing ones. To contribute:
+
+    Fork the repository
+    Create a feature branch (git checkout -b feature-branch)
+    Commit your changes (git commit -m "Add new feature")
+    Push to the branch (git push origin feature-branch)
+    Open a pull request
+
+License
+
+This repository is licensed under the MIT License, making it open for anyone to use, modify, and share. See LICENSE for details.
