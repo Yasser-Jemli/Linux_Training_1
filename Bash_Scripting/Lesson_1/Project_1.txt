@@ -1,0 +1,59 @@
+Task: Create a Backup Script
+Scenario
+
+Your boss has recognized your valuable contributions to the company and wants to ensure your work is securely backed up. To help with this, they have suggested that you create a script to easily back up all the files in your home directory.
+
+Since this script will also be useful for others in the office, they want it to be well-documented and professionally formatted so it can be easily shared.
+Your Task
+Step 1: Create the Backup Script
+
+    Script Location: Create a bash script named backup_script in your ~/bash_course/ directory.
+
+    Purpose: This script should back up all files in your home directory and save them in a .tar archive in the ~/bash_course folder.
+
+    Script Components:
+    Make sure your script includes the following:
+        Shebang line (#!/bin/bash) to specify the interpreter.
+        Commands that accomplish the backup (see Extra Guidance below).
+        Exit Statement with an appropriate exit code:
+            Use exit 0 for success.
+            Use exit 1 for errors.
+
+    Professional Information:
+    Add the following 5 documentation elements at the top of your script:
+        Author: Your name.
+        Date Created: The date you wrote the script.
+        Last Modified: The most recent modification date.
+        Description: A brief description of what the script does.
+        Usage: Instructions on how to run the script, e.g., ./backup_script.
+
+Step 2: Set Permissions
+
+Since the script will be shared, use the following permissions:
+
+    Owner (you): Read, write, and execute permissions.
+    Group (your colleagues): Read and execute permissions.
+    Others: Read-only access.
+
+To help you find the correct octal code for these permissions, use permissions-calculator.org.
+Step 3: Test Your Script
+
+Run the script several times to make sure it works as expected. You should see multiple backup files created in the ~/bash_course folder, each with a unique name based on the current date and time.
+Extra Guidance
+
+You’ll use the tar command to create the .tar archive.
+
+If you’re new to tar, here’s a quick overview:
+
+    The tar command creates .tar archives, which are similar to .zip files but commonly used in Linux.
+
+Command to Use:
+Use the following command in your script to create the backup:
+
+tar -cvf ~/bash_course/my_backup_"$(date +%d-%m-%Y_%H-%M-%S)".tar ~/* 2>/dev/null
+
+    Explanation:
+        This command takes the contents of your home directory, compresses it into a .tar archive, and saves the archive in the ~/bash_course folder.
+        The archive name will include the current date and time for easy tracking.
+
+For example, a backup made on July 12, 2020, at 12:00:00 PM would be named my_backup_12-07-2020_12-00-00.tar.
