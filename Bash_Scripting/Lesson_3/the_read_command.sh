@@ -17,20 +17,28 @@
 # now check echo $input1  and echo input2 
 # well done :D
 
-read name age town 
-echo "My name is $name"
-echo "My age is $age"
-echo "My town is $town"
+# read name age town 
+# echo "My name is $name"
+# echo "My age is $age"
+# echo "My town is $town"
 
 
-read -p "Input your first Name : " name 
-echo "My name is $name"
+# read -p "Input your first Name : " name 
+# echo "My name is $name"
 
-read -t 5 -p "Input your name in less then 5 seconds : " name
-echo "My name is $name"
+# read -t 5 -p "Input your name in less then 5 seconds : " name
+# echo "My name is $name"
 
-read -s -t 5 -p "Put your name in less then 5 seconds , ( nothing will be displayed when you're typing)" name
-echo "my NAME is $name"
+# read -s -t 5 -p "Put your name in less then 5 seconds , ( nothing will be displayed when you're typing)" name
+# echo "my NAME is $name"
 
 # read -N 4 -p " enter your PIN passcode (must be 4 digits) : " digit
 # echo " your passcode is $digit "
+
+PS3="what is the day of the week : "
+select day in mon tue wed thu fri sat sun;
+do 
+    echo "The day of the week is $day"
+    # comment the next ligne to see the impact of break statement
+    break
+done
