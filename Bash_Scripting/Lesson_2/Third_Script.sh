@@ -94,8 +94,6 @@ echo ""
 echo " Let's take from the last 5 (without including the five )  in the number variable untill the end"
 echo " ${number: -3:3}"
 
-
-
 echo "-------------------------------------------------------------"
 echo "		Arithmetic Expansion "
 
@@ -168,3 +166,73 @@ echo {0..100..10}
 
 echo " Try to Print this -->  Month1 Month2 Month3 .... Month12 "
 echo Month{1..12}
+
+echo " we have a variable var which have the value 00225544"
+echo " how to know the length of it directly "
+var=00225544
+echo ${#var}
+
+# **************************************************************************
+# More Bash Variables
+# **************************************************************************
+
+echo ""
+echo "---------------- More Intersting shell varaiables -----------------------------------------"
+
+echo ""
+
+# Try those command
+echo " Let's try something new "
+echo "" 
+gedit &
+Gedit_Process_Output=$(pgrep gedit)
+
+# Now from the output which the PID , try this command and examin the output 
+cat /proc/$Gedit_Process_Output/environ 
+echo ""
+echo "Kill the gedit Process in the background "
+kill -9 $Gedit_Process_Output
+echo ""
+echo ""
+echo ""
+echo " Lets' start over but with more enhacements"
+
+gedit &
+Gedit_Process_Output=$(pgrep gedit)
+
+# Now from the output which the PID , try this command and examin the output 
+cat /proc/$Gedit_Process_Output/environ | tr '\0' '\n'
+echo ""
+echo "Kill the gedit Process in the background "
+kill -9 $Gedit_Process_Output
+echo ""
+echo ""
+echo ""
+
+# The export command is used to set the env variable. Now any application, executed from
+# the current shell script, will receive this variable. We can export custom variables for our
+# own purposes in an application or shell script that is executed. There are many standard
+# environment variables that are available for the shell by default.
+
+echo " Try export command , give and example by forking another shell and see Parents child relation ;) "
+echo ""
+
+echo " How shell is looking for the command ? did he search in all directories ?"
+echo " i don't think so :/"
+echo " check the PATH env variable "
+echo " Type this command " && echo 'echo $PATH'
+echo $PATH
+
+# When given a command for execution, the shell automatically searches for the executable
+# in the list of directories in the PATH environment variable (directory paths are delimited by
+# the ":" character). Usually, $PATH is defined in /etc/environment or /etc/profile or
+# ~/.bashrc. When we need to add a new path to the PATH environment, we use:
+# export PATH="$PATH:/home/user/bin"
+
+# When using single quotes, variables will not be expanded and will be
+# displayed as is. This means:
+# $ echo '$var' will print $var
+# Whereas, $ echo "$var" will print the value of the $var variable if
+# defined or nothing at all if it is not defined.
+
+echo " Try this Known Variable : HOME ,PWD ,USER ,UID ,SHELL..."
