@@ -236,3 +236,32 @@ echo $PATH
 # defined or nothing at all if it is not defined.
 
 echo " Try this Known Variable : HOME ,PWD ,USER ,UID ,SHELL..."
+
+
+# *********************** Making files immutable *********************************
+
+# Files on extended type filesystems, which are common in Linux (for example, ext2, ext3, ext4,
+# and so on) can be made immutable using a certain type of file attributes. When a file is made
+# immutable, any user or super user cannot remove the file until the immutable attribute is
+# removed from the file. We can easily find out the filesystem type of any mounted partition
+# by looking at the /etc/mtab file. The first column of the file specifies the partition device
+# path (for example, /dev/sda5) and the third column specifies the file system type
+# (for example, ext3).
+# 
+# Making a file immutable is one of the methods for securing files from modification. An
+# example would be to use it for the /etc/resolv.conf file which stores a list of DNS servers.
+# A DNS server is used to convert domain names (such as packtpub.com) to IP addresses.
+# Usually, the DNS server will be set to your ISP's DNS server. However, some people prefer
+# to use a third-party server and they can modify /etc/resolv.conf to point to that DNS.
+# However, the next time you get connected to your ISP, /etc/resol
+
+echo " Let's Test what we just Saw ! "
+
+echo " Create a file and store some data into it "
+echo " Now try to make your file immutable "
+echo " to do so you need to type the command chattr +i file "
+echo " Now remove it if you can :D"
+
+echo ""
+echo " In order to make it writable again , you need to remove the attribute as follows "
+echo " chattr -i file "

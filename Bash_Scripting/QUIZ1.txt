@@ -1,0 +1,350 @@
+# Author : Yasser JEMLI
+# Date : 12-11-2024
+
+Shell Scripting Quiz: 50 Questions
+Basic Bash Commands & Syntax
+
+    What does the command echo $0 display?
+        a) The script name
+        b) The current shell
+        c) The environment variable
+        d) The argument passed to the script
+
+    Which command is used to list all files in the current directory in long format with hidden files?
+        a) ls -la
+        b) ls -l
+        c) ls -a
+        d) ls -lh
+
+    What is the default shell in most Linux distributions?
+        a) zsh
+        b) ksh
+        c) bash
+        d) fish
+
+    Which of the following will display the current date and time?
+        a) echo $date
+        b) date
+        c) date +%T
+        d) current time
+
+    How can you create a directory named myfolder?
+        a) mkdir myfolder
+        b) create myfolder
+        c) newdir myfolder
+        d) make myfolder
+
+Shell Variables
+
+    What will the command echo $HOME display?
+        a) Current directory
+        b) Current user
+        c) The home directory of the current user
+        d) The shell path
+
+    Which command would you use to assign a value of 5 to a variable x?
+        a) x = 5
+        b) x := 5
+        c) x=5
+        d) x -> 5
+
+    How do you access the first argument passed to a script?
+        a) $1
+        b) $0
+        c) $*
+        d) &1
+
+    What does the following code do?
+
+    var="Hello, World"
+    echo ${var:6:5}
+
+        a) Prints Hello
+        b) Prints World
+        c) Prints World!
+        d) Prints Hello,
+
+    Which of the following is the correct way to make a variable local inside a function?
+        a) local var=value
+        b) var=value
+        c) local value=var
+        d) global var=value
+
+String Operations & Slicing
+
+    How can you extract the first 3 characters from a string my_string="abcdef"?
+        a) ${my_string:0:3}
+        b) ${my_string[0:3]}
+        c) ${my_string[:3]}
+        d) my_string[0:3]
+
+    How do you find the length of a string stored in the variable string="Linux"?
+        a) length $string
+        b) ${#string}
+        c) len $string
+        d) length(string)
+
+    What will the following script print?
+
+    str="bash scripting"
+    echo ${str#* }
+
+        a) bash scripting
+        b) scripting
+        c) bash
+        d) s
+
+    How do you replace the first occurrence of the substring cat with dog in the string str="cat and cat"?
+        a) ${str/cat/dog}
+        b) str.replace("cat", "dog")
+        c) replace(str, "cat", "dog")
+        d) str.substitute("cat", "dog")
+
+    Which command extracts the substring from position 5 to 10 of a variable text="abcdefgh"?
+        a) ${text:5:10}
+        b) ${text[5:10]}
+        c) substring($text, 5, 10)
+        d) text[5:10]
+
+Control Structures: if, elif, else
+
+    Which command checks if a file exists in the current directory?
+        a) if [ -f filename ]
+        b) if [ -e filename ]
+        c) if file filename
+        d) if exists filename
+
+    What will this code print?
+
+    x=5
+    if [ $x -eq 5 ]; then
+      echo "Equal to 5"
+    else
+      echo "Not equal to 5"
+    fi
+
+        a) Equal to 5
+        b) Not equal to 5
+        c) Error
+        d) Nothing
+
+    What is the correct syntax for an if-else statement in Bash?
+        a) if condition then ... else ...
+        b) if condition { ... } else { ... }
+        c) if (condition) { ... } else { ... }
+        d) if [condition] { ... } else { ... }
+
+    How would you compare two strings str1="abc" and str2="def" in Bash?
+        a) if [ $str1 == $str2 ]
+        b) if [ $str1 -eq $str2 ]
+        c) if [ $str1 = $str2 ]
+        d) if [ $str1 == $str2 ]
+
+    Which operator checks if two numbers are not equal in a Bash if statement?
+        a) -neq
+        b) -ne
+        c) !=
+        d) =
+
+Loops
+
+    Which loop will run a script 5 times in Bash?
+        a) for i in {1..5}
+        b) for i=1; i<=5; i++
+        c) for i in 1 2 3 4 5
+        d) repeat 5
+
+    How do you create an infinite while loop in Bash?
+        a) while true; do ... done
+        b) repeat 1 do ... done
+        c) while false; do ... done
+        d) infinite while do ... done
+
+    What will the following for loop print?
+
+    for i in {1..3}; do
+        echo $i
+    done
+
+        a) 1 2 3
+        b) 1 2
+        c) 3 2 1
+        d) 1
+
+    What does the break statement do in a loop?
+        a) Skips to the next iteration
+        b) Stops the loop entirely
+        c) Returns control to the function
+        d) Terminates the script
+
+    How would you iterate over a list of files in a directory?
+        a) for file in $(ls); do ... done
+        b) foreach file in $(ls); do ... done
+        c) for file in $(find .); do ... done
+        d) for file in *; do ... done
+
+Functions
+
+    How do you define a function in Bash?
+        a) def my_function() { ... }
+        b) function my_function { ... }
+        c) my_function() { ... }
+        d) my_function: function { ... }
+
+    What will the following code do?
+
+    function greet {
+        echo "Hello, $1"
+    }
+    greet "Alice"
+
+        a) Hello, Alice
+        b) Alice
+        c) greet Hello, Alice
+        d) Error
+
+    How can you return a value from a function in Bash?
+        a) return $value
+        b) echo $value
+        c) exit $value
+        d) exit value
+
+    How do you call a function in Bash?
+        a) call function_name
+        b) function_name()
+        c) function_name
+        d) execute function_name
+
+    What is the purpose of the return statement in a Bash function?
+        a) To exit the script
+        b) To exit the function and optionally return a value
+        c) To return to the main shell
+        d) To call another function
+
+Redirection & Piping
+
+    Which symbol is used to redirect standard output to a file?
+        a) >
+        b) <
+        c) >>
+        d) <<
+
+    How would you append output to an existing file in Bash?
+        a) echo "text" >> file.txt
+        b) echo "text" > file.txt
+        c) echo "text" < file.txt
+        d) echo "text" 2> file.txt
+
+    Which command is used to pipe the output of one command to another?
+        a) |
+        b) >
+        c) <
+        d) <<
+
+    What does 2>&1 do in a command?
+        a) Redirects standard output to standard error
+        b) Redirects standard error to standard output
+        c) Redirects both standard output and standard error to a file
+        d) Redirects both streams to /dev/null
+
+    Which command will redirect both stdout and stderr to a file?
+        a) command > file 2>&1
+        b) command 2>&1 > file
+        c) command >> file
+        d) command > file
+
+System Calls & Process Management
+
+    Which command displays the current running processes?
+        a) ps
+        b) ls
+        c) top
+        d) proc
+
+    How do you kill a process in Linux?
+        a) kill
+        b) end
+        c) stop
+        d) killall
+
+    What command is used to check the available disk space in a Linux system?
+        a) df
+        b) lsblk
+        c) du
+        d) space
+
+    What command would you use to check the amount of free memory in the system?
+        a) free
+        b) mem
+        c) top
+        d) vmstat
+
+    Which of the following commands will terminate a running process by PID (process ID)?
+        a) kill 12345
+        b) stop 12345
+        c) end 12345
+        d) terminate 12345
+
+File Handling
+
+    How do you create an empty file in the shell?
+        a) touch filename
+        b) create filename
+        c) file filename
+        d) new filename
+
+    How can you copy a file in Linux?
+        a) cp source destination
+        b) copy source destination
+        c) mv source destination
+        d) duplicate source destination
+
+    Which command is used to remove a file?
+        a) del
+        b) rm
+        c) erase
+        d) remove
+
+    How do you move a file in the Linux shell?
+        a) move file.txt /new/location/
+        b) mv file.txt /new/location/
+        c) cp file.txt /new/location/
+        d) move file.txt
+
+    What does the chmod 755 file command do?
+        a) Grants read, write, and execute permissions to owner, read and execute to others
+        b) Removes all permissions
+        c) Grants write permission to everyone
+        d) Changes the file to executable only
+
+Advanced Topics
+
+    What is the purpose of the trap command in Bash?
+        a) To trap signals and handle them
+        b) To pause a script
+        c) To execute a function on exit
+        d) To exit a script
+
+    How can you debug a Bash script?
+        a) bash -x script.sh
+        b) bash --debug script.sh
+        c) sh script.sh -v
+        d) debug script.sh
+
+    Which command is used to read input from the user in Bash?
+        a) input
+        b) read
+        c) ask
+        d) get
+
+    Which command would you use to display the manual for a command in Linux?
+        a) help
+        b) man
+        c) info
+        d) docs
+
+    What is the purpose of #!/bin/bash at the top of a Bash script?
+        a) To specify the interpreter for the script
+        b) To set the script to executable
+        c) To call the shell
+        d) To specify the path for the script
