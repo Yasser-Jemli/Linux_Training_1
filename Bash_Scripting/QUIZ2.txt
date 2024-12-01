@@ -1,0 +1,371 @@
+# Author : Yasser JEMLI
+# Date : 12-11-2024
+
+
+Shell Scripting Quiz: 50 Questions (Part 2)
+Basic Bash Commands & Syntax
+
+    Which command is used to display the contents of a file in the terminal?
+        a) cat
+        b) show
+        c) print
+        d) display
+
+    What does the command pwd display?
+        a) The current working directory
+        b) The name of the current user
+        c) The path to the script
+        d) The list of directories
+
+    How would you list all the files in a directory, including subdirectories?
+        a) ls -R
+        b) ls -r
+        c) ls --recursive
+        d) ls -lR
+
+    What does the command echo $? return?
+        a) The exit status of the last command
+        b) The last command's output
+        c) The previous error message
+        d) The current directory path
+
+    Which command displays the manual page for a command?
+        a) help
+        b) man
+        c) info
+        d) docs
+
+Shell Variables
+
+    How do you assign a value of hello to a variable named greeting?
+        a) greeting="hello"
+        b) greeting: hello
+        c) greeting = hello
+        d) set greeting=hello
+
+    How do you print the value of a variable named greeting?
+        a) print $greeting
+        b) echo $greeting
+        c) show $greeting
+        d) output $greeting
+
+    What will the following command output?
+
+    x=5
+    echo "Value of x: $x"
+
+        a) Value of x: 5
+        b) Value of x: $x
+        c) x: 5
+        d) x=5
+
+    Which of the following is used to declare a variable in the shell without making it available globally?
+        a) declare var=value
+        b) local var=value
+        c) export var=value
+        d) global var=value
+
+    How do you remove a variable from the environment?
+        a) unset var
+        b) remove var
+        c) clear var
+        d) delete var
+
+String Operations & Slicing
+
+    What will the following command output?
+
+    string="Shell Scripting"
+    echo ${string:6:9}
+
+        a) Shell Scripting
+        b) Scripting
+        c) Shell
+        d) Scipting
+
+    How do you concatenate two strings, str1="Hello" and str2="World", in Bash?
+        a) str1 + str2
+        b) str1 . str2
+        c) str1$2
+        d) str1$"str2"
+
+    Which operator is used to check if two strings are equal in Bash?
+        a) ==
+        b) =
+        c) eq
+        d) ===
+
+    How would you check if a string variable text is empty?
+        a) if [ -z $text ]
+        b) if [ $text == "" ]
+        c) if [ -n $text ]
+        d) if [ -e $text ]
+
+    How do you get the length of a string my_string="Bash scripting"?
+        a) length $my_string
+        b) ${#my_string}
+        c) len($my_string)
+        d) size $my_string
+
+Control Structures: if, elif, else
+
+    What is the correct syntax for an if statement in Bash?
+        a) if condition then { ... }
+        b) if { condition } then ...
+        c) if [ condition ] { ... }
+        d) if [ condition ]; then ...
+
+    What will the following script print?
+
+x=3
+if [ $x -gt 5 ]; then
+  echo "Greater"
+else
+  echo "Smaller or equal"
+fi
+
+    a) Greater
+    b) Smaller or equal
+    c) Error
+    d) Nothing
+
+How do you use elif in a Bash script?
+
+    a) if condition; elif condition2; then ...
+    b) if condition else if condition2; then ...
+    c) if condition; elif condition2 ...
+    d) if condition or if condition2; then ...
+
+How do you compare two integers in an if statement in Bash?
+
+    a) [ $x -eq $y ]
+    b) [ $x == $y ]
+    c) [ $x equals $y ]
+    d) [ $x = $y ]
+
+What will the following code output?
+
+    a=10
+    b=20
+    if [ $a -lt $b ] && [ $b -gt 15 ]; then
+      echo "True"
+    else
+      echo "False"
+    fi
+
+        a) True
+        b) False
+        c) Error
+        d) Nothing
+
+Loops
+
+    How do you create a while loop in Bash?
+        a) while [ condition ]; do ... done
+        b) while condition do ... end
+        c) loop condition do ... done
+        d) while (condition) { ... }
+
+    What will the following code output?
+
+i=1
+while [ $i -le 3 ]; do
+  echo $i
+  i=$((i+1))
+done
+
+    a) 1 2 3
+    b) 3 2 1
+    c) 1 1 1
+    d) 1
+
+How do you create a for loop in Bash?
+
+    a) for i in range(5); do ... done
+    b) for i=0 to 5; do ... done
+    c) for i in {1..5}; do ... done
+    d) repeat 5 do ... done
+
+What does the continue statement do in a loop?
+
+    a) Exits the loop
+    b) Skips the current iteration and moves to the next one
+    c) Returns control to the function
+    d) Stops the script execution
+
+What will the following for loop print?
+
+    for i in 1 2 3 4 5; do
+      echo $i
+    done
+
+        a) 1 2 3 4 5
+        b) 1 2 3 4
+        c) 5 4 3 2 1
+        d) 1 1 1 1 1
+
+Functions
+
+    How do you define a function in Bash?
+        a) def function_name { ... }
+        b) function function_name { ... }
+        c) function_name() { ... }
+        d) func function_name { ... }
+
+    What will the following script do?
+
+    greet() {
+      echo "Hello, $1"
+    }
+    greet "John"
+
+        a) Hello, John
+        b) John
+        c) greet Hello, John
+        d) Error
+
+    How do you return a value from a function in Bash?
+        a) echo $value
+        b) exit $value
+        c) return $value
+        d) return value
+
+    How can you pass an argument to a function?
+        a) function_name $arg
+        b) function_name(arg)
+        c) function_name -arg
+        d) function_name $1
+
+    How do you make a function take a variable number of arguments?
+        a) function_name ...
+        b) function_name $@
+        c) function_name [*]
+        d) function_name [args]
+
+Redirection & Piping
+
+    Which operator is used to redirect the output of a command to a file, overwriting the file?
+        a) >
+        b) >>
+        c) <
+        d) <<
+
+    What will the command cat file.txt > output.txt do?
+        a) Append file.txt to output.txt
+        b) Overwrite output.txt with the contents of file.txt
+        c) Copy file.txt to output.txt
+        d) Display file.txt contents
+
+    Which command is used to send both stdout and stderr to /dev/null?
+        a) command > /dev/null 2>&1
+        b) command > /dev/null
+        c) command 2>/dev/null
+        d) command >> /dev/null
+
+    What is the purpose of the tee command?
+        a) Redirects output to a file and the screen
+        b) Redirects output to a file
+        c) Redirects input to a command
+        d) Combines multiple output streams
+
+    Which command sends the standard error to the file error.log?
+        a) command 2> error.log
+        b) command > error.log
+        c) command 1> error.log
+        d) command &> error.log
+
+System Calls & Process Management
+
+    How do you check the running processes in Linux?
+        a) ps -ef
+        b) ps aux
+        c) top
+        d) All of the above
+
+    Which command is used to terminate a process by name in Linux?
+        a) killall
+        b) end
+        c) stop
+        d) kill
+
+    How do you display the currently logged-in users?
+        a) who
+        b) whoami
+        c) users
+        d) w
+
+    Which command shows the disk usage of a file or directory?
+        a) du
+        b) df
+        c) ls
+        d) stat
+
+    What command can you use to monitor memory usage in real-time?
+        a) vmstat
+        b) free
+        c) top
+        d) ps
+
+File Handling
+
+    Which command is used to move a file from one directory to another?
+        a) mv
+        b) move
+        c) cp
+        d) transfer
+
+    Which command would you use to copy a directory and its contents recursively?
+        a) cp -r
+        b) copy -r
+        c) cp -a
+        d) move -r
+
+    How can you remove a directory and its contents in one command?
+        a) rm -rf
+        b) rmdir -r
+        c) remove -r
+        d) del -rf
+
+    What is the command to change the permissions of a file?
+        a) chmod
+        b) perm
+        c) changeperm
+        d) setperm
+
+    How can you list all the files with their details in a directory?
+        a) ls -l
+        b) ls -a
+        c) ls -lh
+        d) ls -la
+
+Advanced Topics
+
+    Which of the following commands will give you a debug trace of a Bash script?
+        a) bash -v script.sh
+        b) bash -x script.sh
+        c) bash --debug script.sh
+        d) debug script.sh
+
+    How would you read user input in a Bash script?
+        a) input()
+        b) read
+        c) ask
+        d) get_input
+
+    What is the purpose of the trap command?
+        a) To trap signals and handle them
+        b) To pause the script execution
+        c) To handle errors and exceptions
+        d) To handle file input/output
+
+    Which file contains user environment variables in Linux?
+        a) /etc/environment
+        b) /etc/rc.local
+        c) /etc/profile
+        d) /etc/bashrc
+
+    What is the purpose of the export command in Bash?
+        a) To set an environment variable
+        b) To export a file
+        c) To transfer files between systems
+        d) To make a variable local to a function

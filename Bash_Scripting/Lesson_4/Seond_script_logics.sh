@@ -197,27 +197,33 @@ cat log.txt
 # Create a file descriptor for reading a file, as follows:
 # $ exec 3<input.txt # open for reading with descriptor number 3
 # We could use it in the following way:
-# $ echo this is a test line > input.txt
-# $ exec 3<input.txt
+echo this is a test line > input.txt
+exec 3< input.txt
+
 # Now you can use file descriptor 3 with commands. For example, we will use cat <&3
 # as follows:
-# $ cat<&3
+cat <&3
+
 # this is a test line
 # If a second read is required, we cannot re-use the file descriptor 3. It is required that we
 # reassign the file descriptor 3 for read using exec for making a second read.
-# 26Chapter 1
+
 # Create a file descriptor for writing (truncate mode) as follows:
-# $ exec 4>output.txt # open for writing
+exec 4>output.txt # open for writing
 # For example:
-# $ exec 4>output.txt
-# $ echo newline >&4
-# $ cat output.txt
+exec 4>output.txt
+echo newline >&4
+cat output.txt
 # newline
+
+
 # Create a file descriptor for writing (append mode) as follows:
-# $ exec 5>>input.txt
+exec 5>>input.txt
+
 # For example:
-# $ exec 5>>input.txt
-# $ echo appended line >&5
-# $ cat input.txt
+exec 5>>input.txt
+echo appended line >&5
+cat input.txt
+
 # newline
 # appended line
